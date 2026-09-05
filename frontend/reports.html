@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - FinAI</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- HEADER -->
+
+    <div class="d-flex justify-content-between
+                align-items-center mb-4">
+
+        <div>
+
+            <h2 class="fw-bold">
+
+                <i class="fa-solid fa-chart-pie text-primary"></i>
+
+                Financial Reports
+
+            </h2>
+
+            <p class="text-muted">
+                Analyze your financial performance
+            </p>
+
+        </div>
+
+        <a href="dashboard.html"
+           class="btn btn-outline-primary">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Dashboard
+
+        </a>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-4">
+
+            <div class="content-card text-center">
+
+                <i class="fa-solid fa-calendar-day
+                          text-primary fs-2">
+                </i>
+
+                <h5 class="mt-3">
+                    Daily Report
+                </h5>
+
+                <p class="text-muted">
+                    View today's financial activity.
+                </p>
+
+                <button
+                    class="btn btn-primary">
+
+                    View Report
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="content-card text-center">
+
+                <i class="fa-solid fa-calendar-week
+                          text-success fs-2">
+                </i>
+
+                <h5 class="mt-3">
+                    Weekly Report
+                </h5>
+
+                <p class="text-muted">
+                    Analyze your weekly spending.
+                </p>
+
+                <button
+                    class="btn btn-success">
+
+                    View Report
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="content-card text-center">
+
+                <i class="fa-solid fa-calendar
+                          text-warning fs-2">
+                </i>
+
+                <h5 class="mt-3">
+                    Monthly Report
+                </h5>
+
+                <p class="text-muted">
+                    Review your monthly finances.
+                </p>
+
+                <button
+                    class="btn btn-warning">
+
+                    View Report
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPENSE CHART -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-5">
+
+            <div class="content-card">
+
+                <h5 class="mb-3">
+                    Expenses by Category
+                </h5>
+
+                <canvas id="expenseChart">
+                </canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- INCOME VS EXPENSE -->
+
+        <div class="col-lg-7">
+
+            <div class="content-card">
+
+                <h5 class="mb-3">
+                    Income vs Expenses
+                </h5>
+
+                <canvas id="incomeExpenseChart">
+                </canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPORT -->
+
+    <div class="content-card mt-4">
+
+        <h5>
+            Export Reports
+        </h5>
+
+        <p class="text-muted">
+            Download your financial reports.
+        </p>
+
+        <button class="btn btn-danger me-2">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            PDF
+
+        </button>
+
+        <button class="btn btn-success me-2">
+
+            <i class="fa-solid fa-file-csv"></i>
+
+            CSV
+
+        </button>
+
+        <button class="btn btn-primary">
+
+            <i class="fa-solid fa-file-excel"></i>
+
+            Excel
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Chart.js -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+
+<script src="js/auth.js"></script>
+<script src="js/reports.js"></script>
+
+</body>
+
+</html>

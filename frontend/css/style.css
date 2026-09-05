@@ -1,0 +1,887 @@
+/* =====================================================
+   FINAI - AI PERSONAL FINANCE CHATBOT
+   MAIN STYLESHEET
+   ===================================================== */
+
+
+/* =====================================================
+   1. ROOT VARIABLES
+   ===================================================== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #dbeafe;
+
+    --success: #16a34a;
+    --success-light: #dcfce7;
+
+    --danger: #dc2626;
+    --danger-light: #fee2e2;
+
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+
+    --dark: #0f172a;
+    --gray-dark: #475569;
+    --gray: #64748b;
+    --gray-light: #e2e8f0;
+    --light: #f8fafc;
+
+    --white: #ffffff;
+
+    --sidebar-width: 250px;
+
+    --border-radius: 14px;
+
+    --shadow:
+        0 4px 20px rgba(15, 23, 42, 0.08);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   2. GLOBAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8fafc;
+
+    color: var(--dark);
+
+    min-height: 100vh;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* Images */
+
+img {
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   3. NAVBAR
+   ===================================================== */
+
+.navbar {
+    padding: 15px 0;
+
+    background: var(--white);
+}
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+
+    color: var(--dark);
+}
+
+
+.navbar-brand i {
+    margin-right: 7px;
+}
+
+
+.navbar .nav-link {
+    color: var(--gray-dark);
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   4. LOGO
+   ===================================================== */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--white);
+
+    padding: 20px;
+}
+
+
+.logo i {
+    font-size: 24px;
+
+    color: #60a5fa;
+}
+
+
+/* =====================================================
+   5. SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: var(--sidebar-width);
+
+    height: 100vh;
+
+    background: var(--dark);
+
+    color: var(--white);
+
+    overflow-y: auto;
+
+    z-index: 1000;
+
+    box-shadow:
+        4px 0 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Navigation title */
+
+.nav-title {
+    padding: 18px 20px 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #94a3b8;
+}
+
+
+/* Navigation links */
+
+.sidebar .nav-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    margin: 4px 10px;
+
+    border-radius: 9px;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+
+    transition: var(--transition);
+}
+
+
+.sidebar .nav-link i {
+    width: 20px;
+
+    text-align: center;
+}
+
+
+.sidebar .nav-link:hover {
+    background: #1e293b;
+
+    color: var(--white);
+
+    transform: translateX(3px);
+}
+
+
+.sidebar .nav-link.active {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =====================================================
+   6. MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    margin-left: var(--sidebar-width);
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   7. TOPBAR
+   ===================================================== */
+
+.topbar {
+    height: 70px;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--gray-light);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 900;
+}
+
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =====================================================
+   8. PAGE CONTENT
+   ===================================================== */
+
+.page-content {
+    padding: 30px;
+}
+
+
+/* =====================================================
+   9. CONTENT CARD
+   ===================================================== */
+
+.content-card {
+    background: var(--white);
+
+    border-radius: var(--border-radius);
+
+    padding: 24px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid #eef2f7;
+
+    transition: var(--transition);
+}
+
+
+.content-card:hover {
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =====================================================
+   10. STAT CARDS
+   ===================================================== */
+
+.stat-card {
+    background: var(--white);
+
+    border-radius: var(--border-radius);
+
+    padding: 22px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid #eef2f7;
+
+    transition: var(--transition);
+}
+
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+
+.stat-icon {
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.income-icon {
+    background: var(--success-light);
+
+    color: var(--success);
+}
+
+
+.expense-icon {
+    background: var(--danger-light);
+
+    color: var(--danger);
+}
+
+
+.balance-icon {
+    background: var(--primary-light);
+
+    color: var(--primary);
+}
+
+
+.budget-icon {
+    background: var(--warning-light);
+
+    color: var(--warning);
+}
+
+
+.stat-title {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+
+.stat-value {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--dark);
+}
+
+
+/* =====================================================
+   11. BUTTONS
+   ===================================================== */
+
+.btn {
+    border-radius: 8px;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+
+.btn-primary {
+    background: var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.btn-success:hover,
+.btn-danger:hover,
+.btn-warning:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   12. FORMS
+   ===================================================== */
+
+.form-label {
+    font-weight: 600;
+
+    color: var(--gray-dark);
+
+    margin-bottom: 7px;
+}
+
+
+.form-control,
+.form-select {
+    border: 1px solid var(--gray-light);
+
+    border-radius: 8px;
+
+    padding: 10px 13px;
+
+    transition: var(--transition);
+}
+
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   13. TABLE
+   ===================================================== */
+
+.table {
+    vertical-align: middle;
+}
+
+
+.table thead th {
+    background: #f8fafc;
+
+    color: var(--gray-dark);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--gray-light);
+}
+
+
+.table tbody td {
+    color: var(--gray-dark);
+
+    padding-top: 14px;
+
+    padding-bottom: 14px;
+}
+
+
+.table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   14. CHATBOT
+   ===================================================== */
+
+.chat-box {
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--gray-light);
+}
+
+
+/* Chat messages */
+
+.message {
+    display: flex;
+
+    margin-bottom: 15px;
+}
+
+
+.message-content {
+    max-width: 75%;
+
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    line-height: 1.5;
+}
+
+
+.message.bot .message-content {
+    background: var(--white);
+
+    border: 1px solid var(--gray-light);
+
+    color: var(--dark);
+}
+
+
+.message.user {
+    justify-content: flex-end;
+}
+
+
+.message.user .message-content {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =====================================================
+   15. PROGRESS
+   ===================================================== */
+
+.progress {
+    height: 10px;
+
+    border-radius: 10px;
+
+    background: #e2e8f0;
+}
+
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   16. CHART AREA
+   ===================================================== */
+
+canvas {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   17. BADGES
+   ===================================================== */
+
+.badge {
+    border-radius: 20px;
+
+    padding: 7px 12px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   18. HERO SECTION
+   ===================================================== */
+
+.hero-section {
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   19. LANDING PAGE
+   ===================================================== */
+
+body > .container {
+    width: 100%;
+}
+
+
+.display-4 {
+    line-height: 1.15;
+}
+
+
+/* =====================================================
+   20. FOOTER
+   ===================================================== */
+
+footer {
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   21. SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+    width: 7px;
+
+    height: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+
+/* =====================================================
+   22. ANIMATIONS
+   ===================================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+.content-card,
+.stat-card {
+    animation: fadeIn 0.4s ease;
+}
+
+
+/* =====================================================
+   23. MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+
+        transition: var(--transition);
+    }
+
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+
+    .main-content {
+        margin-left: 0;
+    }
+
+
+    .mobile-menu {
+        display: inline-block;
+    }
+
+
+    .page-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   24. TABLET
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+
+    .page-content {
+        padding: 15px;
+    }
+
+
+    .content-card {
+        padding: 18px;
+    }
+
+
+    .stat-card {
+        padding: 18px;
+    }
+
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+
+    .message-content {
+        max-width: 90%;
+    }
+
+}
+
+
+/* =====================================================
+   25. MOBILE
+   ===================================================== */
+
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 12px 10px;
+    }
+
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+
+    .page-content {
+        padding: 12px;
+    }
+
+
+    .content-card {
+        padding: 15px;
+    }
+
+
+    .topbar {
+        height: 60px;
+    }
+
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+
+    .message-content {
+        max-width: 95%;
+    }
+
+
+    .btn-lg {
+        width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   26. DARK MODE PREPARATION
+   ===================================================== */
+
+.dark-mode {
+    background: #020617;
+
+    color: #e2e8f0;
+}
+
+
+.dark-mode .content-card,
+.dark-mode .stat-card,
+.dark-mode .topbar {
+    background: #0f172a;
+
+    color: #e2e8f0;
+
+    border-color: #1e293b;
+}
+
+
+.dark-mode .stat-title,
+.dark-mode .text-muted {
+    color: #94a3b8 !important;
+}
+
+
+/* =====================================================
+   27. UTILITY
+   ===================================================== */
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+
+.text-success {
+    color: var(--success) !important;
+}
+
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+
+/* =====================================================
+   FINAI CSS END
+   ===================================================== */
